@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>:nth-child() CSS Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+    }
+
+    h2 {
+      border-left: 5px solid #4CAF50;
+      padding-left: 10px;
+      color: #333;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+
+    ul.task1 li {
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+
+    ul.task1 li:nth-child(odd) {
+      font-weight: bold;
+    }
+
+    ul.task1 li:nth-child(4n) {
+      color: red;
+    }
+
+    table.task2 {
+      border-collapse: collapse;
+      width: 300px;
+    }
+
+    .task2 td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .task2 tr:nth-child(2n) {
+      background: #eee;
+    }
+
+    .task2 tr:nth-child(3) {
+      background: #ffeb3b;
+      font-weight: bold;
+    }
+
+    .task3 .box {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+      background: #ccc;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .task3 .box:nth-child(1) {
+      border: 3px solid #4CAF50;
+    }
+
+    .task3 .box:nth-child(3n) {
+      background: #ffab91;
+    }
+
+    .task4 p {
+      padding: 8px 12px;
+      margin: 5px 0;
+      background: #e0f2f1;
+    }
+
+    .task4 p:nth-child(2) {
+      background: #b2ebf2;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h2>🔹 1. List Items</h2>
+    <p><em>Odd = bold, every 4th = red</em></p>
+    <ul class="task1">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+      <li>Date</li>
+      <li>Elderberry</li>
+      <li>Fig</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔹 2. Table Rows</h2>
+    <p><em>Even rows = gray, Row 3 = highlighted</em></p>
+    <table class="task2" border="1">
+      <tr><td>Row 1</td></tr>
+      <tr><td>Row 2</td></tr>
+      <tr><td>Row 3</td></tr>
+      <tr><td>Row 4</td></tr>
+      <tr><td>Row 5</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔹 3. Grid of Boxes</h2>
+    <p><em>First = bordered, every 3rd = new background</em></p>
+    <div class="task3">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🔹 4. Nested Elements</h2>
+    <p><em>Second paragraph in each section = styled</em></p>
+    <section class="task4">
+      <p>Intro</p>
+      <p>Details</p>
+    </section>
+
+    <section class="task4">
+      <p>Overview</p>
+      <p>Stats</p>
+    </section>
+  </div>
+
+</body>
+</html>
